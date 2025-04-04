@@ -72,5 +72,27 @@ namespace ColorSpheres
             Console.WriteLine($"Grey: {color.GetGrey()}");
         }
     }
-    
+    public class Program
+    {
+        private static void Main(string[] args)
+        {
+            Color red = new Color(255, 0, 0);
+            Color green = new Color(0, 255, 0);
+            Color blue = new Color(0, 0, 255);
+
+            Sphere sphere1 = new Sphere(red, 10.0f);
+            Sphere sphere2 = new Sphere(green, 15.0f);
+            Sphere sphere3 = new Sphere(blue, 20.0f);
+
+            sphere1.Throw();
+            sphere1.Throw();
+            sphere2.Throw();
+            sphere3.Pop();
+            sphere3.Throw();
+
+            sphere1.PrintState();
+            sphere2.PrintState();
+            sphere3.PrintState();
+        }
+    }
 }
