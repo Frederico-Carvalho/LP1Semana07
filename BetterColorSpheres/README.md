@@ -1,7 +1,3 @@
-# Better Color Spheres
-
-This diagram represents the class structure of the Better Color Spheres project.
-
 ```mermaid
 classDiagram
     class Color {
