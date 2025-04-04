@@ -3,13 +3,13 @@ classDiagram
     class Color {
         -const int MinColorValue
         -const int MaxColorValue
-        -int red
-        -int green
-        -int blue
-        -int alpha
+        -readonly int red
+        -readonly int green
+        -readonly int blue
+        -readonly int alpha
         +Color(int red, int green, int blue, int alpha)
-        +Color(int red, int green, int blue)
-        -int ValidateColorComponent(int value)
+        +Color(int red, int green, int blue, MaxColorValue)
+        -int CheckColor(int value)
         +int GetRed()
         +int GetGreen()
         +int GetBlue()
@@ -29,9 +29,10 @@ classDiagram
     }
 
     class Program {
-        +static void Main(string[] args)
+        +static void Main()
     }
 
     Color <-- Sphere : uses
+    
     Sphere <-- Program : uses
 ```
